@@ -80,7 +80,7 @@ class Feed extends ModelBase {
 			}
 
             $parts['path'] = !empty($parts['path']) ? $parts['path'] : '';
-            $parts['path'] = substr($parts['path'], -1) == '/' ? substr($parts['path'], 0, strlen($parts['path'] - 1)) : $parts['path'];
+            $parts['path'] = substr($parts['path'], -1) == '/' ? substr($parts['path'], 0, strlen($parts['path']) - 1) : $parts['path'];
 			$count = self::factory()
 				->where_raw('url = ? OR url = ? OR url LIKE ?', array($http, $https, '%' . $parts['host']. $parts['path'] . '%')) // Retrict one shaarli per domain to avoid malformed urls => TODO: format url correctly
 				->count();
