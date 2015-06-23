@@ -15,6 +15,7 @@ Shaarli REST API
 * MySQL or Sqlite
 * PDO
 * Apache RewriteEngine
+* PHP PECL fileinfo for favicons fetching (optional)
 
 ## Update your installation
 * Update your installation via Git (`git update origin master`) or the [archive file](archive/master.zip).

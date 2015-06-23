@@ -596,9 +596,9 @@ class ShaarliApi {
 
 				$favicon = FAVICON_DIRECTORY . $arguments['id'] . '.ico';
 
-				// if( !file_exists($favicon) ) {
-				// 	$favicon = __DIR__ . '/favicon.ico';
-				// }
+				 if( !file_exists($favicon) ) {
+				 	$favicon = __DIR__ . '/favicon.ico';
+				 }
 
 				return array('favicon' => $favicon);
 			}

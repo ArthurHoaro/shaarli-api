@@ -224,7 +224,9 @@ class CronController {
 		$feed->fetched();
 		$feed->save();
 
-		$this->getFavicon( $feed );
+        // Workaround missing PECL dependency
+        if(function_exists('finfo_open'))
+		    $this->getFavicon( $feed );
 	}
 
 	/**
